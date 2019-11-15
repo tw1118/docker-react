@@ -5,5 +5,6 @@ services:
 before_install:
   - docker build -t tw1118/docker-react -f Dockerfile.dev .
 
+scripts:
+  - docker run -e CI=true tw1118/docker-react npm run test -- --coverage
 # language: generic
-#   - docker run -e CI=true USERNAME/docker-react npm run test
